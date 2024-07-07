@@ -1,27 +1,28 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Title from './components/Title';
-import InvestorsData from './components/InvestorsData';
-import Investor from './components/Investor';
-import ErrorPage from './components/ErrorPage';
-import Welcome from './components/Welcome';
+import Header from './components/Header';
+import ErrorPage from './pages/ErrorPage';
+import Welcome from './pages/Welcome';
+import Investors from './pages/Investors';
+import Investor from './pages/Investor';
+import { Section } from './components/StyledComponents';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Title />
+        <Header />
       </header>
-      <section>
+      <Section>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Welcome />} />
-            <Route path="/investors" element={<InvestorsData />} />
+            <Route path="/investors" element={<Investors />} />
             <Route path="/investor/:firmId" element={<Investor />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </BrowserRouter>
-      </section>
+      </Section>
     </div>
   );
 }

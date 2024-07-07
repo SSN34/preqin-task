@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Welcome() {
     return (
-        <div class="welcome">
+        <div className="welcome">
             <h1 id="welcome-title">
 
                 Welcome to the Preqin Investor Details

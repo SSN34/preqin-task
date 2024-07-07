@@ -1,5 +1,5 @@
 
-function Title(){
+function Header(){
     return (
         <div className="title">
             <a href="/">PREQIN</a>
@@ -7,4 +7,4 @@ function Title(){
     )
 }
 
-export default Title;
+export default Header;
