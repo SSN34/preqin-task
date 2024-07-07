@@ -37,7 +37,7 @@ function Investor() {
                 id="asset-class-select"
                 value={assetClass}
                 label="Asset Class"
-                style={{width: "200px", height}}
+                style={{width: "200px"}}
             >
                 <MenuItem value="">
                     <em>None</em>
