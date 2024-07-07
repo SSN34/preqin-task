@@ -1,0 +1,21 @@
+
+.title{
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: white;
+  background-color: rgb(27, 7, 87);
+}
+
+#welcome-title{
+  font-size: 40px;
+}
+
+#welcome-body{
+  font-size: 24px;
+}
+
+.welcome{
+  text-align: center;
+}
