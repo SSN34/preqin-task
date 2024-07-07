@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getInvestors } from "../services/investors";
+import { fetchDataUtility } from "../utility/fetchUtility";
 
 function InvestorsData() {
 
@@ -7,11 +8,7 @@ function InvestorsData() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-
-        getInvestors().then((investorData) => {
-            setInvestors(investorData);
-        })
-
+        fetchDataUtility(getInvestors,setInvestors);
     }, []);
 
     useEffect(() => {

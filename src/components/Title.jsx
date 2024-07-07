@@ -2,7 +2,7 @@
 function Title(){
     return (
         <div className="title">
-            PREQIN
+            <a href="/">PREQIN</a>
         </div>
     )
 }

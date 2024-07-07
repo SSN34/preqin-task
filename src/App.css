@@ -1,11 +1,15 @@
 
 .title{
   padding: 12px 24px;
+  background-color: rgb(27, 7, 87);
+}
+
+.title a{
   font-size: 20px;
   font-weight: 700;
   font-family: sans-serif;
   color: white;
-  background-color: rgb(27, 7, 87);
+  text-decoration: none;
 }
 
 #welcome-title{
