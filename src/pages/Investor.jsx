@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchDataUtility } from "../utility/fetchUtility";
 import { getInvestorDetails } from "../services/investors";
-import { Description, Title } from "../components/StyledComponents";
+import { Description, Title } from "../components/global/StyledComponents";
 import { Skeleton } from "@mui/material";
-import InvestorDetails from "../components/InvestorDetails";
-import SelectAssetClass from "../components/selectAssetClass";
+import InvestorDetails from "../components/investor/InvestorDetails";
+import SelectAssetClass from "../components/investor/selectAssetClass";
 import { getAssetDetails } from "../services/assestClasses";
-import InvestorAssetsDetails from "../components/InvestorAssetsDetails";
+import InvestorAssetsDetails from "../components/investor/InvestorAssetsDetails";
 
 function Investor() {
 
@@ -20,7 +20,7 @@ function Investor() {
 
     useEffect(() => {
         fetchDataUtility(getInvestorDetails, setInvestorData, firmId);
-    }, []);
+    }, [firmId]);
 
     useEffect(() => {
         setLoading(false);
@@ -29,8 +29,10 @@ function Investor() {
     useEffect(() => {
         if(assetClass !== ""){
             fetchDataUtility(getAssetDetails, setAssetsData, {firmId, assetClass});
+        } else {
+            setAssetsData([]);
         }
-    }, [assetClass]);
+    }, [firmId, assetClass]);
 
     return (loading ? <Skeleton /> :
         <>
@@ -42,7 +44,8 @@ function Investor() {
                 <InvestorDetails investorData={investorData} />
             </Description>
             <SelectAssetClass setAssetClass={setAssetClass}/>
-            <InvestorAssetsDetails assetsData={assetsData}/>
+
+            {assetsData.length > 0 ? <InvestorAssetsDetails assetsData={assetsData}/> : ""}
         </>
     );
 }

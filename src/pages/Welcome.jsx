@@ -9,7 +9,7 @@ function Welcome() {
                 Welcome to the Preqin Investor Details
             </h1>
             <div id="welcome-body">
-                Please <Link to="/investors">click here</Link> for details
+                Please <Link onClick={() => window.location = "/investors"}>click here</Link> for dashboard
             </div>
         </div>
     )

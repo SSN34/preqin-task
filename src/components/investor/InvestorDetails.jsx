@@ -1,7 +1,3 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getInvestorDetails } from "../services/investors";
-import { fetchDataUtility } from "../utility/fetchUtility";
 
 function InvestorDetails({ investorData }) {
     return (

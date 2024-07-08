@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
+import Header from './components/global/Header';
 import ErrorPage from './pages/ErrorPage';
 import Welcome from './pages/Welcome';
 import Investors from './pages/Investors';
 import Investor from './pages/Investor';
-import { Section } from './components/StyledComponents';
+import { Section } from './components/global/StyledComponents';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/investors" element={<Investors />} />
-            <Route path="/investor/:firmId" element={<Investor />} />
+            <Route path="/investors/:firmId" element={<Investor />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </BrowserRouter>

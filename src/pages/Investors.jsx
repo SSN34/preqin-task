@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { getInvestors } from "../services/investors";
 import { fetchDataUtility } from "../utility/fetchUtility";
-import InvestorsTable from "../components/InvestorsTable";
-import { CenteredDiv, Description, Title } from "../components/StyledComponents";
-import { CircularProgress, Divider, Skeleton } from "@mui/material";
+import InvestorsTable from "../components/investors/InvestorsTable";
+import { CenteredDiv, Description, Title } from "../components/global/StyledComponents";
+import { CircularProgress, Divider } from "@mui/material";
 
 function Investors() {
     const [investors, setInvestors] = useState([])

@@ -1,15 +1,19 @@
 
-.title{
-  padding: 12px 24px;
+#title{
+  padding: 4px 24px;
   background-color: #1b0757;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-.title a{
+#title a{
   font-size: 20px;
   font-weight: 700;
   font-family: sans-serif;
   color: white;
   text-decoration: none;
+  padding: 8px 0px;
 }
 
 #welcome-title{
@@ -22,4 +26,8 @@
 
 .welcome{
   text-align: center;
+}
+
+th{
+  font-weight: 700 !important;
 }
